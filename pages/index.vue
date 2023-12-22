@@ -1,63 +1,37 @@
 <template>
-        <section id="introduction-pane">
-            <h1 class="introduction-pane__title">Introduction Text</h1>
-            <p>This text is added in the middle.</p>
+    <section id="home-banner">
+        <h1 class="home-banner__title">Hey!</h1>
+    </section>
+
+    <div class="home-container">
+
+        <section>
+            <p>
+                Welcome to my professional space! I'm François Botha, a seasoned Senior Analyst at Nukon and a full-stack developer with a rich background in digital transformation and software engineering. My journey in the tech world has been marked by significant roles across diverse industries, from leading agile development teams to spearheading major digital initiatives. With a career spanning over two decades, I've honed my skills in a variety of technologies, including Java Spring Boot, Apache Camel, Cucumber BDD testing, and Vue.js. My expertise lies in developing robust solutions for complex business challenges, particularly in the realms of supply chain management and digital integration.
+            </p>
+            <p>
+                My professional path is a blend of technical prowess and strategic insight, shaped by experiences at prestigious organizations like PwC and a strong academic foundation with a Master's in Software Engineering from the University of Liverpool. At Nukon, I've played a pivotal role in implementing cutting-edge digital solutions for large-scale operations, including a bespoke barrel management system for Treasury Wine Estates and a transport planning solution for Mars Wrigley. My approach is always geared towards leveraging technology to enhance efficiency, streamline operations, and drive business growth. I'm passionate about exploring new technologies and methodologies, constantly seeking to expand my skill set and contribute to the success of forward-thinking organizations.
+            </p>
         </section>
 
-        <section id="plans">
-            <h1 class="section-title">Choose Your Plan</h1>
-            <div class="plan__list">
-                <article class="plan">
-                    <h1 class="plan__title">FREE</h1>
-                    <h2 class="plan__price">$0/month</h2>
-                    <h3>For hobby projects or small teams.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">1 Workspace</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">10GB Storage</li>
-                        <li class="plan__feature">Basic Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
-                </article>
-                <article class="plan plan--highlighted">
-                    <h1 class="plan__annotation">RECOMMENDED</h1>
-                    <h1 class="plan__title">PLUS</h1>
-                    <h2 class="plan__price">$29/month</h2>
-                    <h3>For ambitious projects.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">5 Workspaces</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">100GB Storage</li>
-                        <li class="plan__feature">Plus Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">PREMIUM</h1>
-                    <h2 class="plan__price">$99/month</h2>
-                    <h3>Your enterprise solution.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">10 Workspaces</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">Unlimited Storage</li>
-                        <li class="plan__feature">Priority Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
-                </article>
+        <section>
+            <h2 class="header-title">Latest Blog Posts</h2>
+            <div class="posts-grid">
+                <Post :posts="posts" />
             </div>
         </section>
+    </div>
 </template>
 
 <script setup>
-
+const { data: posts } = await useAsyncData('posts', () =>
+    queryContent('/blog')
+        .sort({ date: 1 })
+        .limit(3)
+        .find()
+)
 </script>
 
 <style>
-    @import url("~/assets/css/home.css");
+@import url("~/assets/css/home.css");
 </style>

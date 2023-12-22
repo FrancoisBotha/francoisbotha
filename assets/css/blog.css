@@ -11,3 +11,22 @@
         padding: 15px;
     }
 }
+
+#blog-banner {
+    background-color: rgb(183, 181, 162);
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.blog-banner__title {
+    color: rgb(54, 54, 54);
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    font-size: 2rem;
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+

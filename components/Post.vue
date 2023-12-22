@@ -56,7 +56,7 @@ const props = defineProps(['posts'])
 
 .read-more {
   display: inline-block;
-  background-color: #165809;
+  background-color: #1e4b70de;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -65,7 +65,6 @@ const props = defineProps(['posts'])
 }
 
 .read-more:hover {
-  background-color: #165809;
   color: #ffffff;
   transform: scale(1.1);
   cursor: pointer;

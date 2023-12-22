@@ -1,3 +1,35 @@
+#home-banner {
+  background-color: rgb(183, 181, 162);
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.home-banner__title {
+  color: rgb(54, 54, 54);
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  font-size: 2rem;
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+
+.home-container {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 767px) {
+    .home-container {
+        padding: 15px;
+    }
+}
+
 #introduction-pane {
     background-color: rgb(183, 181, 162);
     height: 340px;
@@ -21,115 +53,31 @@
     right: 480px;
 }
 
-.plan {
-    background-color: rgb(128, 172, 136);
-    text-align: center;
-    padding: 1rem;
-    margin: 0.5rem 0; /* top and bottom*/
-    width: 100;
+.header-title {
+    font-size: 1.875rem; /* Equivalent to text-3xl in Tailwind */
+    font-weight: bold;
+    margin-top: 2rem; /* Equivalent to mt-8 in Tailwind */
 }
 
-.plan--highlighted {
-    background-color: rgb(74, 98, 78); 
-    color: white;
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default grid */
+    gap: 2.5rem; /* Equivalent to gap-10 in Tailwind */
+    margin-top: 2rem; /* Equivalent to mt-8 in Tailwind */
 }
 
-.plan__annotation {
-    background: white;
-    color:rgb(71, 82, 73);
-    padding: 8px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-}
-
-.plan__features {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+@media (min-width: 768px) {
+    .posts-grid {
+        grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 in Tailwind */
+    }
 }
 
 @media (min-width: 40rem) {
-    .plan__list {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .plan {
-        display: inline-block;
-        width: 30%;
-        vertical-align: top;
-        margin: 0.2rem;
-        min-width: 13rem;
-        max-width: 15rem;
-    }
 
-    .plan--highlighted {
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
     
 }
 
-.plan__title {
-   color:  rgb(47, 60, 49);
-}
 
-.plan__price {
-    color:  rgb(114, 117, 114);
- }
-
- .plan--highlighted .plan__title {
-    color:  rgb(255, 255, 255);
- }
-
- .plan--highlighted .plan__price {
-    color:  rgb(166, 184, 167);
- }
-
-.plan__feature {
-    margin: 8px 0;
-}
-
-
-#key-features {
-    background-color: rgb(169, 180, 171);
-    margin-top: 80px;
-    padding: 16px;
-}
-
-#key-features .section-title{
-    color: white;
-    margin: 32px;
-}
-
-.key-feature__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-}
-
-.key-feature__image {
-    background:rgb(71, 82, 73);
-    width: 128px;
-    height: 128px;
-    border: 2px solid rgb(42,42,42);
-    border-radius: 50%;
-    margin: auto; /* will fill the space left and right equally */
-    padding: 20px;
-}
-
-.key-feature__description {
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-}
 
 /* h1 {
     font-family: 'Oswald', sans-serif;
