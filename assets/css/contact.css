@@ -1,8 +1,8 @@
 #contact-banner {
-    background: url("~/assets/images/contact.webp"); 
+    background: url("~/assets/images/contact.webp");
     background-repeat: no-repeat;
     position: relative;
-    height: 40vh;
+    height: 20vh;
 }
 
 .contact-banner__title {
@@ -18,8 +18,9 @@
 @media (min-width: 40rem) {
     #contact-banner {
         background-size: cover;
-        background-position: left 4% bottom 4% ;
-    } 
+        background-position: left 4% bottom 4%;
+    }
+
     .contact-banner__title {
         font-size: 3.5rem;
     }
@@ -50,19 +51,78 @@
     }
 }
 
+
+@media (min-width: 40rem) {
+    .contact-container-grid {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: auto 200px 500px auto;
+        grid-template-rows: auto;
+    } 
+}
+
+.col-1 {}
+
+.col-2 {
+    margin: 0.3rem;
+}
+
+.col-3 {}
+
+.col-4 {}
+
+@media (min-width: 40rem) {
+    .contact-form {
+        margin: auto;
+        grid-gap: 0.5rem;
+        min-width: 200px;
+        max-width: 500px;
+    }
+}
+
+.contact-form {
+    margin: 0.3rem;
+}
+
+.email-label {
+    font-size: bold;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.social-media {
+    font-size: bold;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
 .contact-form label {
-    display: block; /*Don't want it displayed all on one line*/
+    display: block;
+    /*Don't want it displayed all on one line*/
     margin-top: 1rem;
     width: 100%;
     font-size: smaller;
     font-weight: 600;
 }
 
+.contact-form .info {
+    background-color: red;
+    grid-column-start: 1;
+}
+
+.contact-form .form-first-name {
+    grid-column-start: 3;
+}
+
+.contact-form .form-last-name {
+    grid-column-start: 4;
+}
+
 .contact-form input,
 .contact-form select,
-.contact-form textarea
- {
-    display: block; /*Don't want it displayed all on one line*/
+.contact-form textarea {
+    display: block;
+    /*Don't want it displayed all on one line*/
     margin-top: 0.25rem;
     border: 1px solid #ccc;
     border-radius: 0.2rem;
@@ -73,30 +133,64 @@
 }
 
 .contact-form textarea {
-    width: 25rem;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    outline: none; /* No blue border for inputs */
+    outline: none;
+    /* No blue border for inputs */
     background: #f4f7f5;
     border-color: #475249;
 }
 
+/*Validation*/
+.contact-form input:invalid,
+.contact-form textarea:invalid .contact-form:invalid {
+    background-color: red;
+    background: #faacac;
+}
+
+
 @media (min-width: 40rem) {
-    .contact-form {
-        margin: auto;
-        width: 25rem;
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1px;
     }
 }
 
-/*Validation*/
-.contact-form input:invalid,
-.contact-form textarea:invalid
-.contact-form:invalid
- {
-   background-color: red;
-   background: #faacac;
+form label {
+    display: block;
 }
+
+form p {
+    margin: 0;
+}
+
+.full-width {
+    grid-column: 1 / 3;
+}
+
+.wrapper textarea,
+.wrapper .button {
+    grid-column: 1 / -1;
+    /* Span from the first to the last column */
+}
+
+button {
+    width: 100%;
+}
+
+@media (min-width: 40rem) {
+    button {
+        width: 25%;
+    }
+}
+
+
+
+
+
