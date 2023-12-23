@@ -18,9 +18,9 @@
           <div class="social-media">
             Social Media:
             <p>
-              <a href="https://github.com/francoisbotha" class="contact-page__social-btn"> <Icon name="entypo-social:github-with-circle" size="1.5rem" class="icon" /></a>
-              <Icon name="entypo-social:twitter" size="1.5rem" class="icon" />
               <a href="https://www.linkedin.com/in/fran-botha" class="contact-page__social-btn"> <Icon name="entypo-social:linkedin-with-circle" size="1.5rem" class="icon" /></a>
+              <Icon name="entypo-social:twitter" size="1.5rem" class="icon" />
+              <a href="https://github.com/francoisbotha" class="contact-page__social-btn"> <Icon name="entypo-social:github-with-circle" size="1.5rem" class="icon" /></a> 
             </p>
           </div>
         </div>

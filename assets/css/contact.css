@@ -82,6 +82,7 @@
 
 .contact-form {
     margin: 0.3rem;
+    font-family: 'Montserrat';
 }
 
 .email-label {
@@ -128,7 +129,8 @@
     border-radius: 0.2rem;
     padding: 0.2rem 0.5rem;
     font: inherit;
-    font-weight: 100;
+    font-weight: 400;
+    font-size: 1rem;
     width: 100%;
 }
 
@@ -192,6 +194,8 @@ button {
 
 .contact-page__social-btn {
     color: black;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 
