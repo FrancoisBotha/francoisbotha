@@ -1,6 +1,9 @@
 <template>
     <section id="home-banner">
         <h1 class="home-banner__title">Hey!</h1>
+        <div class="francois-image-container">
+            <img class="francois-image" src="~/assets/images/francois1.jpg" alt="Francois Botha"/>
+        </div>
     </section>
 
     <div class="home-container">

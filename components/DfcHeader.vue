@@ -28,6 +28,7 @@ const route = useRoute();
 const navigation = [
   { name: 'Home', href: '/', current: route.name == 'index' },
   { name: 'Blog', href: '/blog', current: route.name.includes('blog') },
+  { name: 'Scratch Pad', href: '/scratchpad', current: route.name.includes('scratchpad') },
   { name: 'Contact', href: '/contact', current: route.name == 'contact' }
 ]
 </script>
