@@ -1,3 +1,12 @@
+---
+title: Python Quick Start Reference 
+description: Very basics of Python
+date: 2024-07-06
+cover: clement-helardot-95YRwf6CNw8-unsplash.jpg
+tags:
+  - Python
+---
+
 # Python Quick Start Reference 
 
 This post is a quick reference and introduction to Python.
@@ -188,3 +197,49 @@ outfile:
         outfile.write(cleaned_words)
 ```
 
+## Dictionaries
+
+```python
+english_to_french = {'red': 'rouge', 'blue': 'bleu', 'green': 'vert'}
+print("red is", english_to_french['red'])
+# red is rouge
+
+list(english_to_french.keys())
+# ['green', 'blue', 'red']
+
+list(english_to_french.values())
+# ['vert', 'bleu', 'rouge']
+
+del english_to_french['green']
+# [('blue', 'bleu'), ('red', 'rouge')]
+
+'red' in english_to_french
+# True
+
+print(english_to_french.get('chartreuse', 'No translation'))
+# No translation
+
+#-> Word count example:
+    for word in sample_string.split():
+        occurrences[word] = occurrences.get(word, 0) + 1
+```
+
+## Control Flow
+```python
+# -> While Loop:
+while condition:
+    body
+
+# -> If stament
+if condition1:
+    body1
+elif condition2:
+    body2
+else
+    body3
+
+# -> For loop
+for item in sequence:
+    body (incl break and continue)
+
+```

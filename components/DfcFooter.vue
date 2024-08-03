@@ -12,7 +12,7 @@
 <script setup>
     const links = [
         {name: 'GitHub', href: 'https://github.com/francoisbotha', icon: 'entypo-social:github-with-circle'},
-        {name: 'Twitter', href: 'https://twitter.com', icon: 'entypo-social:twitter'},
+        // {name: 'Twitter', href: 'https://twitter.com', icon: 'entypo-social:twitter'},
         {name: 'LinkedIn', href: 'https://www.linkedin.com/in/fran-botha', icon: 'entypo-social:linkedin-with-circle'}
     ]
 </script>

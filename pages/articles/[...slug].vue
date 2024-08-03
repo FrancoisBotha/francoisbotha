@@ -1,5 +1,6 @@
 <template>
     <div class="blog-container">
+      <NuxtLink to='/scratchpad' class="back-button">Back</NuxtLink>
       <ContentRenderer :value="data" class="markdown-body" ref="markdownContent" />
       <div class="my-8 ">
         <a v-for="tag in  data.tags " :key="tag" 
@@ -13,7 +14,6 @@
 <script setup>
   import hljs from 'highlight.js';
   import 'highlight.js/styles/github.css';
-  import 'highlight.js/styles/vs.css'; // Import the chosen theme's CSS'
 
   const { path } = useRoute()
 

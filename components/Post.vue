@@ -35,8 +35,11 @@ const props = defineProps(['posts'])
 
 .post-image {
   width: 100%;
-  height: 12rem;
-  object-fit: cover;
+  height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+  max-height: 12rem; /* Limit the maximum height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  display: block;
+  margin: 0 auto; /* Center the image */
 }
 
 .post-content {
