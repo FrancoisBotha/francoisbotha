@@ -13,7 +13,7 @@
 
 <script setup>
   const { data: posts } = await useAsyncData('posts', () =>
-    queryContent('/scratchpad').find()
+    queryContent('/scratchpad') .sort({ date: -1 }).find()
   )
 </script>
 

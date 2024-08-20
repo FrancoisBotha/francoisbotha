@@ -1,5 +1,6 @@
 <template>
     <div class="blog-container">
+      <NuxtLink to='/blog' class="back-button">Back</NuxtLink>
       <ContentRenderer :value="data" class="markdown-body" ref="markdownContent" />
       <div class="my-8 ">
         <a v-for="tag in  data.tags " :key="tag" 
