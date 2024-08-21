@@ -6,13 +6,13 @@
 
   <div class="blog-container">
     <section class="blog-grid">
-      <Post :posts="posts" />
+      <Post :posts="scratchNotes" />
     </section>
   </div>
 </template>
 
 <script setup>
-  const { data: posts } = await useAsyncData('posts', () =>
+  const { data: scratchNotes } = await useAsyncData('scratchNotes', () =>
     queryContent('/scratchpad') .sort({ date: -1 }).find()
   )
 </script>

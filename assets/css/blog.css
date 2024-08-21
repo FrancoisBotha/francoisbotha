@@ -30,3 +30,7 @@
     transform: translate(-50%, -50%); /* Adjust for exact centering */
 }
 
+.markdown-body {
+    margin-top: 1rem;
+}
+

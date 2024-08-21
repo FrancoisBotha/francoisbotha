@@ -1,10 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css', 'github-markdown-css', 'highlight.js'],
+  css: ['~/assets/css/main.css', 'github-markdown-css', 'highlight.js/styles/default.css'],
+
   modules: ['nuxt-icon',
             '@nuxt/content',
             '@nuxtjs/google-fonts',
+            'nuxt-gtag'
           ],
+  gtag: {
+    id: process.env.GTM_ID || 'G-XXXXXXXXXX'  // Fallback ID
+  },
   googleFonts: {
     families: {
       Oswald: {
@@ -17,11 +22,14 @@ export default defineNuxtConfig({
       }
     }
   },
+
   content: {
     // https://content.nuxtjs.org/api/configuration
     markdown: {
       anchorLinks: false
     }
   },
-  devtools: { enabled: true }
+
+  devtools: { enabled: true },
+  compatibilityDate: '2024-08-21'
 })
